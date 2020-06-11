@@ -1,0 +1,50 @@
+#instrucciones{
+    width: 100%;
+    background: rgba(255,255,255,.9);
+    padding: 2%;
+}
+#instrucciones article{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+#instrucciones .title{
+    color: rgba(0,0,0,1);
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+pre{
+    width: 100%;
+    background:blue;
+    overflow-x: scroll;
+}
+code div{
+    display: block;
+    width: 100%;
+    background: rgba(0,0,0,1);
+    padding: 2px 5px;
+}
+#faq .title{
+    text-decoration:underline;
+    color: rgba(255,255,255,1);
+    
+}
+#faq p{
+    padding: 5px 15px;
+    color: rgba(255,255,255,.7);
+    text-align: justify;
+}
+#faq{
+    background: rgba(0,0,0,.5);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 55px!important;
+}
+#observaciones .title{
+    color: rgba(255,255,255,.8);
+    padding: 5px;
+    margin-top: 10px;
+}
+footer{
+    height: 150px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>light-box-gallery by Jizra</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://calciferdelioncourt.github.io/galleryBoxGallery/css/lightBox.min.css">
+    <link rel="stylesheet" href="css/instrucciones.css">
+    <link rel="stylesheet" href="https://jizratest.eu5.org/net/css/social-bar.css">
+    <script src="https://kit.fontawesome.com/1f8614daef.js" crossorigin="anonymous"></script>
+    <meta name="theme-color" content="#000"/>
+</head>
+<body class="center">
+    <header class="center">
+        <div class="title">
+            <img id="logo-jizra" src="https://jizratest.eu5.org/img/diseno-jizra-logo.png" alt="logo-jizra"><h1>Gallery Light Box <br> <span>by</span> <br> Jizra</h1>
+        </div>
+    </header>
+    <section id="gallery-light-box" class="gallery-light-box center">
+        <article id="cont-gallery" class="center">
+                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191214_205726_tumblr.jpg" data-url-img="img/IMG_20191214_205726.jpg" data-title-img="Reno" data-desc-img="Adorno Navideño" alt="">
+                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191029_180530_tumblr.jpg" data-url-img="img/IMG_20191029_180530.jpg" data-title-img="Grafitti" data-desc-img="Grafitti en Iztapalapa" alt="">
+                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191106_124024_tumblr.jpg" data-url-img="img/IMG_20191106_124024.jpg" data-title-img="Rabano" data-desc-img="Rabano del cultivo del jardin" alt="">
+                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20200223_183202_tumblr.jpg" data-url-img="img/IMG_20200223_183202.jpg" data-title-img="Casillero del Diablo" data-desc-img="Botella de Casillero del Diablo Carmenere"  alt="">
+                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191201_132814.jpg" data-url-img="img/IMG_20191201_132814.jpg" data-title-img="Chapultepec" data-desc-img="Castillo de Chapultepec" alt="">
+                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191201_162647.jpg" data-url-img="img/IMG_20191201_162647.jpg" data-title-img="Esqueleto" data-desc-img="Esqueleto de animal prehistorico. Museo de ciencias naturales" alt="">
+                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191204_230451.jpg" data-url-img="img/IMG_20191204_230451.jpg" data-title-img="Gaspar" data-desc-img="Gaspar perrito pug" alt="">
+                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20200107_150205.jpg" data-url-img="img/IMG_20200107_150205.jpg" data-title-img="Pavoreal" data-desc-img="Pavoreal del Museo Dolores Olmedo" alt="">
+        </article>
+    </section>
+    <section id="instrucciones">
+        <article id="faq">
+            <div class="title">Acerca de "Gallery Light Box by Jizra" 0.03.2020.00 :</div>
+            <p>
+                "Gallery Light Box by Jizra" es una galería de imágenes responsive de tipo light box construida en Html 5, Css 3 y javascript. <br>
+                Esta es la primera versión beta de esta galería por tanto cuenta con un funcionamiento muy básico, puede tener fallos y no funcionar en todos los navegadores.
+            </p>
+        </article>
+        <article>
+            <div class="title">Instrucciones :</div>
+            <code>
+                <div>1: Agrega la etiqueta de estilos entre tu etiqueta &lthead&gt</div>
+                <pre>
+                
+    
+&ltlink rel="stylesheet" href="https://calciferdelioncourt.github.io/galleryBoxGallery/css/lightBox.min.css"&gt
+&ltscript src="https://kit.fontawesome.com/1f8614daef.js" crossorigin="anonymous"&gt&lt/script&gt
+    
+                </pre>
+                <div>2: Agrega el maquetado html donde quieras poner tu galería</div>
+                <pre>
+
+    
+&ltsection id="gallery-light-box" class="gallery-light-box center"&gt
+    &ltarticle id="cont-gallery" class="center"&gt
+        &ltimg src="" data-url-img="" data-title-img="" data-desc-img=""&gt
+    &lt/article&gt
+&lt/section&gt
+                </pre>
+                <div>3:Repite este fragmento dentro de la etiqueta &ltdiv id="cont-gallery"&gt por cada imagen que quieras agregar</div>
+                <pre>
+
+    
+&ltimg class="front-gallery src="" data-url-img="" data-title-img="" data-desc-img="" alt=""&gt
+
+                </pre>
+                <div>4: Agrega el Script antes del cierre de tu etiqueta &lt/body&gt</div>
+                <pre>
+               
+&ltscript src="https://calciferdelioncourt.github.io/galleryBoxGallery/js/lightBox.min.js"&gt&lt/script&gt
+                  
+                </pre>
+                <article id="observaciones">
+                    <div class="title">Atributos disponibles :</div>
+                    <div>
+                        El atributo <span style="background:green;">src</span> de la etiqueta <span style="background:pink;">img</span> muestra una imagen de 150px x 150px (es la imagen pequeña de la galería) Se recomienda su uso con imágenes pequeñas para cargar rápido <br><br>
+                        El atributo <span style="background:orange;">data-url-img</span> muestra la imagen grande en el light box si esta imagen no se define cargara la imagen del atributo <span style="background:green;">src</span> <br><br>
+                        El atributo <span style="background:orange;">data-url-img</span> puede estar vació pero no se debe eliminar <span style="background:orange;">data-url-img=""</span><br><br>
+                        El atributo <span style="background:red;">data-title-img</span> puede estar vació pero no se debe eliminar <span style="background:red;">data-title-img=""</span> este atributo esta encargado de mostrar el titulo de la imagen<br><br>
+                        El atributo <span style="background:gray;">data-desc-img</span> puede estar vació pero no se debe eliminar <span style="background:gray;">data-desc-img=""</span> este atributo mostrara la descripción de la imagen<br><br>
+                        Ejemplo :
+                    </div>
+                </article>
+                <pre>
+               
+<span style="background:pink;">&ltimg <span style="background:green;">src="img/imagen.jpg"</span> <span style="background:orange;">data-url-img="img/imagen.jpg"</span> <span style="background:red;">data-title-img="Reno"</span> <span style="background:gray;">data-desc-img="Adorno Navideño"</span>&gt</span>
+                  
+                </pre>
+            </code>
+        </article>
+    </section>
+    <footer>
+        <p>Proximamente mas actualizaciones...</p>
+    </footer>
+    <script src="https://calciferdelioncourt.github.io/galleryBoxGallery/js/lightBox.min.js"></script>
+    <script src="https://jizratest.eu5.org/net/js/social-bar.js"></script>
+</body>
+</html>

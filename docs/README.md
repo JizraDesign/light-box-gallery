@@ -1,2 +1,2 @@
 # light-box-gallery
-Galeria efecto lightbox
+Galería de imágenes estilo Light-box

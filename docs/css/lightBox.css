@@ -59,7 +59,6 @@
 
 .gallery-img img {
   width: 100%;
-  filter: grayscale(100%);
   transition: all 0.3s ease-in;
 }
 
@@ -79,16 +78,6 @@
 .descrip-img {
   display: none;
 }
-
-.gallery-img:hover {
-  filter: grayscale(0);
-}
-
-.gallery-img:hover img {
-  filter: grayscale(0%);
-  transform: scale(1.5);
-}
-
 /*----------------------------------light box----------------------------------*/
 #light-box {
   position: fixed;

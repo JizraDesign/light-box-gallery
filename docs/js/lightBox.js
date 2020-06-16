@@ -11,6 +11,9 @@
 //   Ejemplo
 //   -------
 //   wrapInner ('body', 'div', 'class', 'my-class');
+console.log('%c versionde de desarrollo','background: #ff0000; color: #fff');
+console.log('%c If you have to ask, you\'ll never know. If you know, you need only ask.','background: #000; color: #fff');
+console.log('%c Gallery Light Box by https://fb.me/jizradesign','background: #000; color: #fff');
 
 var background = document.querySelector("#cont-gallery");
 //  var bodyinner = document.body;
@@ -45,7 +48,7 @@ for(let i = 0; i < divtag.length; i++){
 let lightBoxPadre=document.createElement('section');
 lightBoxPadre.setAttribute("id","light-box");
 lightBoxPadre.setAttribute("class","center");
-document.querySelector('#gallery-light-box').appendChild(lightBoxPadre);
+document.querySelector('body').appendChild(lightBoxPadre);
 
 const imgGallery=document.querySelectorAll('.gallery-img');
 const lightBox=document.querySelector('#light-box');
@@ -173,3 +176,22 @@ function teclas(e){
     };
     console.log(e.keyCode);*/
 };
+// ------------------animaciones--------------
+window.addEventListener('load', e => {
+    let img = document.querySelectorAll('.gallery-img img');
+    img.forEach(imagen => {
+        imagen.addEventListener('mouseenter', e => {
+            for(imagenes of img){
+                imagenes.style.filter = 'grayscale(100%)';
+            };
+            imagen.style.transform = 'scale(1.5)';
+            imagen.style.filter = 'grayscale(0%)';
+        });
+        imagen.addEventListener('mouseleave', e => {
+            for(imagenes of img){
+                imagenes.style.filter = 'grayscale(0%)';
+            };
+            imagen.style.transform = 'scale(1)';
+        });
+    });
+});

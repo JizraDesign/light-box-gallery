@@ -1,9 +1,8 @@
 // Light box Gallery ceada por Jizra Diseño Web® para https://jizratest.eu5.org todos los derechos reservados©
-// >>>>> -->>>>> ----- funcion para estructurar galeria ----- <<<<<-- <<<<<
-
+// gallery front
 //     Uso
 //   ------
-//   Cuatro parámetros :
+//   Cuatro parámetros que puedes usar:
 //   'parent' = el elemento que necesita ser envuelto
 //   'wrapper' = el elemento que envolverá al parent
 //   'atributo' = el atributo que necesita que tenga este elemento
@@ -15,55 +14,44 @@
 console.log('%c versionde de desarrollo','background: #ff0000; color: #fff');
 console.log('%c If you have to ask, you\'ll never know. If you know, you need only ask.','background: #000; color: #fff');
 console.log('%c Gallery Light Box by https://fb.me/jizradesign','background: #000; color: #fff');
-// >>>>> -->>>>> ----- estructura de galleria ----- <<<<<-- <<<<<
 
-const contGall = document.querySelector("#jd-cont__gallery");
-const imgFront = document.querySelectorAll(".jd-front__img__gallery");
+var background = document.querySelector("#cont-gallery");
+//  var bodyinner = document.body;
+var divtag = document.querySelectorAll(".front-gallery");
 
 function wrapInner(parent, wrapper, attribute, attributevalue) {
     if(typeof wrapper === "string") {
-        wrapper = parent.appendChild(document.createElement(wrapper));
+        wrapper = document.createElement(wrapper);
         wrapper.setAttribute(attribute, attributevalue);
     };
+    var div = parent.appendChild(wrapper);
 };
 
-for(let i = 0; i < imgFront.length; i++){
-    if(imgFront[i].hasAttribute("src")){
-        wrapInner(contGall, 'section', 'class', `jd-front__item__gallery`);
-        let jdGallery = document.querySelectorAll('.jd-front__item__gallery');
-        let img = jdGallery[i].appendChild(document.createElement('img'));
-            img.setAttribute('loading', 'lazy');
-            fetch(imgFront[i].src)
-            .then(res => res.blob())
-            .then(data => {
-                let imgen = URL.createObjectURL(data);
-                img.setAttribute('src', imgen);
-            });
-            if(imgFront[i].dataset.urlImg != ""){
-                fetch(imgFront[i].dataset.urlImg)
-                .then(res => res.blob())
-                .then(data => {
-                    let imgen = URL.createObjectURL(data);
-                    img.setAttribute('data-url-img', imgen);
-                });
-            }else{
-                img.setAttribute('data-url-img',"");
-            };
-            img.setAttribute('data-title-img', imgFront[i].dataset.titleImg);
-            img.setAttribute('data-desc-img', imgFront[i].dataset.descImg);
-            img.setAttribute('alt', imgFront[i].alt);
-        imgFront[i].remove();
+for(let i = 0; i < divtag.length; i++){
+    if(divtag[i].hasAttribute("src")){
+        wrapInner(background, 'section', 'class', `gallery-img`);
+        let galleryImgTest = document.querySelectorAll('.gallery-img');
+        let imagenSRC = divtag[i].src;
+        let imagenURL = divtag[i].dataset.urlImg;
+        let imagenTITLE = divtag[i].dataset.titleImg;
+        let imagenDESC = divtag[i].dataset.descImg;
+        let imagenALT = `imagen ${i}`;//divtag[i].alt;
+        galleryImgTest[i].innerHTML =  `<img loading="lazy" src="${imagenSRC}" data-url-img="${imagenURL}" data-title-img="${imagenTITLE}" data-desc-img="${imagenDESC}" alt="${imagenALT}">`;
+
+        let imagen=divtag[i];
+        background=imagen.parentNode;
+        background.removeChild(imagen);
     };
 };
 
-// >>>>> -->>>>> ----- light box ----- <<<<<-- <<<<<
-
-let lightBoxPadre = document.querySelector('body').appendChild(document.createElement('section'));
-lightBoxPadre.setAttribute("id","jd-light-box");
+// light box
+let lightBoxPadre=document.createElement('section');
+lightBoxPadre.setAttribute("id","light-box");
 lightBoxPadre.setAttribute("class","center");
+document.querySelector('body').appendChild(lightBoxPadre);
 
-const imgGallery=document.querySelectorAll('.jd-front__item__gallery');
-const lightBox=document.querySelector('#jd-light-box');
+const imgGallery=document.querySelectorAll('.gallery-img');
+const lightBox=document.querySelector('#light-box');
 
 for(let i=0;i<imgGallery.length;i++){
     imgGallery[i].addEventListener('click',()=>{
@@ -75,15 +63,15 @@ for(let i=0;i<imgGallery.length;i++){
 function lightbox(i){
     this.i=i;
     let lightBoxCont=document.createElement('section');
-    let dataUrl=document.querySelectorAll('.jd-front__item__gallery img')[i].dataset.urlImg;
-    let dataTitle=document.querySelectorAll('.jd-front__item__gallery img')[i].dataset.titleImg;
-    let dataDesc=document.querySelectorAll('.jd-front__item__gallery img')[i].dataset.descImg;
+    let dataUrl=document.querySelectorAll('.gallery-img img')[i].dataset.urlImg;
+    let dataTitle=document.querySelectorAll('.gallery-img img')[i].dataset.titleImg;
+    let dataDesc=document.querySelectorAll('.gallery-img img')[i].dataset.descImg;
     let ubicacionImg="";
     
     if(dataUrl!==""){
         ubicacionImg=dataUrl;
     }else{
-        ubicacionImg=document.querySelectorAll('.jd-front__item__gallery img')[i].src;
+        ubicacionImg=document.querySelectorAll('.gallery-img img')[i].src;
     };
     
     let panel=` <div id="btn-clouse-lbox"class="center"title="Cerrar"><i class="far fa-times-circle"></i></div>
@@ -118,10 +106,10 @@ function lightbox(i){
                         </section>
                     </setion>`;
 
-    if(!document.querySelector('#jd-light-box-cont')){
+    if(!document.querySelector('#light-box-cont')){
         lightBox.classList.add('active');
-        lightBoxCont.setAttribute("id","jd-light-box-cont");
-        lightBoxCont.setAttribute("class","jd-light-box-cont center");
+        lightBoxCont.setAttribute("id","light-box-cont");
+        lightBoxCont.setAttribute("class","light-box-cont center");
         lightBoxCont.innerHTML=panel;
         lightBox.appendChild(lightBoxCont);
 
@@ -156,13 +144,13 @@ function lightbox(i){
         letra[i].style = `animation: texto 2s ease-in-out ${0.1 * i}s infinite;`
     }
 };
-
-// >>>>> -->>>>> ----- controles ----- <<<<<-- <<<<<
     
 function borrarlightbox(){
     lightBox.classList.remove('active');
     setTimeout(function(){
-        document.querySelector('#jd-light-box-cont').remove();
+        let imagen=document.querySelector('#light-box-cont');
+        padre=imagen.parentNode;
+        padre.removeChild(imagen);
     },500);
 };
 
@@ -188,11 +176,9 @@ function teclas(e){
     };
     console.log(e.keyCode);*/
 };
-
-// >>>>> -->>>>> ----- animaciones ----- <<<<<-- <<<<<
-
+// ------------------animaciones--------------
 window.addEventListener('load', e => {
-    let img = document.querySelectorAll('.jd-front__item__gallery img');
+    let img = document.querySelectorAll('.gallery-img img');
     img.forEach(imagen => {
         imagen.addEventListener('mouseenter', e => {
             for(imagenes of img){

@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://jizradesign.github.io/releases/lightBox.css">
+    <!-- <link rel="stylesheet" href="css/lightBox.css"> -->
     <link rel="stylesheet" href="css/instrucciones.css">
     <link rel="stylesheet" href="https://jizradesign.github.io/releases/social-bar.css">
 
-    <script src="https://kit.fontawesome.com/1f8614daef.js" crossorigin="anonymous"></script>
     <meta name="description" content="Galería de imágenes estilo Light-box.">
     <meta name="theme-color" content="#000"/>
 </head>
@@ -20,16 +20,23 @@
             <img id="logo-jizra" src="https://jizradesign.github.io/img/logo-icon-180x180.png"" alt="logo-jizra"><h1>Gallery Light Box <br> <span>by</span> <br> Jizra</h1>
         </div>
     </header>
-    <section id="gallery-light-box" class="gallery-light-box center">
-        <article id="cont-gallery" class="center">
-                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191214_205726_tumblr.jpg" data-url-img="img/IMG_20191214_205726.jpg" data-title-img="Reno" data-desc-img="Adorno Navideño" alt="">
-                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191029_180530_tumblr.jpg" data-url-img="img/IMG_20191029_180530.jpg" data-title-img="Grafitti" data-desc-img="Grafitti en Iztapalapa" alt="">
-                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191106_124024_tumblr.jpg" data-url-img="img/IMG_20191106_124024.jpg" data-title-img="Rabano" data-desc-img="Rabano del cultivo del jardin" alt="">
-                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20200223_183202_tumblr.jpg" data-url-img="img/IMG_20200223_183202.jpg" data-title-img="Casillero del Diablo" data-desc-img="Botella de Casillero del Diablo Carmenere"  alt="">
-                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191201_132814.jpg" data-url-img="img/IMG_20191201_132814.jpg" data-title-img="Chapultepec" data-desc-img="Castillo de Chapultepec" alt="">
-                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191201_162647.jpg" data-url-img="img/IMG_20191201_162647.jpg" data-title-img="Esqueleto" data-desc-img="Esqueleto de animal prehistorico. Museo de ciencias naturales" alt="">
-                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20191204_230451.jpg" data-url-img="img/IMG_20191204_230451.jpg" data-title-img="Gaspar" data-desc-img="Gaspar perrito pug" alt="">
-                <img class="front-gallery" loading="lazy" src="img/tumblr/IMG_20200107_150205.jpg" data-url-img="img/IMG_20200107_150205.jpg" data-title-img="Pavoreal" data-desc-img="Pavoreal del Museo Dolores Olmedo" alt="">
+    <section id="jd-gallery__light__box" class="jd-gallery__light__box center">
+        <article id="jd-cont__gallery" class="jd-cont__gallery center">
+                <img class="jd-front__img__gallery" 
+                    loading="lazy" 
+                    src="img/tumblr/IMG_20191214_205726_tumblr.jpg" 
+                    data-url-img="img/IMG_20191214_205726.jpg" 
+                    data-title-img="Reno" 
+                    data-desc-img="Adorno Navideño" 
+                    alt=""
+                >
+                <img class="jd-front__img__gallery" loading="lazy" src="img/tumblr/IMG_20191029_180530_tumblr.jpg" data-url-img="img/IMG_20191029_180530.jpg" data-title-img="Grafitti" data-desc-img="Grafitti en Iztapalapa" alt="">
+                <img class="jd-front__img__gallery" loading="lazy" src="img/tumblr/IMG_20191106_124024_tumblr.jpg" data-url-img="img/IMG_20191106_124024.jpg" data-title-img="Rabano" data-desc-img="Rabano del cultivo del jardin" alt="">
+                <img class="jd-front__img__gallery" loading="lazy" src="img/tumblr/IMG_20200223_183202_tumblr.jpg" data-url-img="img/IMG_20200223_183202.jpg" data-title-img="Casillero del Diablo" data-desc-img="Botella de Casillero del Diablo Carmenere"  alt="">
+                <img class="jd-front__img__gallery" loading="lazy" src="img/tumblr/IMG_20191201_132814.jpg" data-url-img="img/IMG_20191201_132814.jpg" data-title-img="Chapultepec" data-desc-img="Castillo de Chapultepec" alt="">
+                <img class="jd-front__img__gallery" loading="lazy" src="img/tumblr/IMG_20191201_162647.jpg" data-url-img="img/IMG_20191201_162647.jpg" data-title-img="Esqueleto" data-desc-img="Esqueleto de animal prehistorico. Museo de ciencias naturales" alt="">
+                <img class="jd-front__img__gallery" loading="lazy" src="img/tumblr/IMG_20191204_230451.jpg" data-url-img="img/IMG_20191204_230451.jpg" data-title-img="Gaspar" data-desc-img="Gaspar perrito pug" alt="">
+                <img class="jd-front__img__gallery" loading="lazy" src="img/tumblr/IMG_20200107_150205.jpg" data-url-img="img/IMG_20200107_150205.jpg" data-title-img="Pavoreal" data-desc-img="Pavoreal del Museo Dolores Olmedo" alt="">
         </article>
     </section>
     <section id="instrucciones">
@@ -55,17 +62,28 @@
                 <pre>
 
     
-&ltsection id="gallery-light-box" class="gallery-light-box center"&gt
-    &ltarticle id="cont-gallery" class="center"&gt
-        &ltimg class="front-gallery" src="" data-url-img="" data-title-img="" data-desc-img=""&gt
+&ltsection id="jd-gallery__light__box" class="jd-gallery__light__box center"&gt
+    &ltarticle id="jd-cont__gallery" class="jd-cont__gallery center"&gt
+        &ltimg class="jd-front__img__gallery"" 
+            src="" 
+            data-url-img="" 
+            data-title-img="" 
+            data-desc-img=""
+        &gt
     &lt/article&gt
 &lt/section&gt
                 </pre>
-                <div>3:Repite este fragmento dentro de la etiqueta &ltdiv id="cont-gallery"&gt por cada imagen que quieras agregar</div>
+                <div>3:Repite este fragmento dentro de la etiqueta &ltdiv id="jd-cont__gallery"&gt por cada imagen que quieras agregar</div>
                 <pre>
 
     
-&ltimg class="front-gallery src="" data-url-img="" data-title-img="" data-desc-img="" alt=""&gt
+&ltimg class="jd-front__img__gallery" 
+    src="" 
+    data-url-img="" 
+    data-title-img="" 
+    data-desc-img="" 
+    alt=""
+&gt
 
                 </pre>
                 <div>4: Agrega el Script antes del cierre de tu etiqueta &lt/body&gt</div>
@@ -87,8 +105,20 @@
                 </article>
                 <pre>
                
-<span style="background:pink;">&ltimg <span style="background:green;">src="img/imagen.jpg"</span> <span style="background:orange;">data-url-img="img/imagen.jpg"</span> <span style="background:red;">data-title-img="Reno"</span> <span style="background:gray;">data-desc-img="Adorno Navideño"</span>&gt</span>
-                  
+&ltimg class="jd-front__img__gallery" 
+
+    loading="lazy" 
+
+    <span style="background:green;">src="img/tumblr/IMG_20191214_205726_tumblr.jpg" </span>
+
+    <span style="background:orange;">data-url-img="img/IMG_20191214_205726.jpg"</span>
+     
+    <span style="background:red;">data-title-img="Reno" </span>
+    
+    <span style="background:gray;">data-desc-img="Adorno Navideño"</span>
+     
+    alt=""
+&gt
                 </pre>
             </code>
         </article>
@@ -96,7 +126,9 @@
     <footer>
         <p>Proximamente mas actualizaciones...</p>
     </footer>
+    <script src="https://kit.fontawesome.com/1f8614daef.js" crossorigin="anonymous"></script>
     <script src="https://jizradesign.github.io/releases/lightBox.js"></script>
+    <!-- <script src="js/lightBox.js"></script> -->
     <script src="https://jizradesign.github.io/releases/social-bar.js"></script>
 </body>
 </html>

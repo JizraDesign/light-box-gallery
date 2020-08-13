@@ -4,18 +4,6 @@
   --logoPorciento:7%;
   --loaderPorciento:10%;
 }
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)!important;
-}
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /*-----------------------------galeria-----------------------------*/
 .jd-gallery__light__box{
   background: rgba(255, 255, 255, .1);

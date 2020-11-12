@@ -47,6 +47,7 @@
 .jd-front__img__gallery{
   width: 100%;
   transition: all 0.3s ease-in;
+  display: none;
 }
 .jd-front__item__gallery img{
   transition: all 0.3s ease-in ;

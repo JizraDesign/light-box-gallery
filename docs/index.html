@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://jizradesign.github.io/releases/lightBox.css">
-    <link rel="stylesheet" href="css/lightBox.css">
+    <link rel="stylesheet" href="https://jizradesign.github.io/releases/lightBox.min.css">
     <link rel="stylesheet" href="https://jizradesign.github.io/releases/social-bar.css">
 
     <meta name="description" content="Galería de imágenes estilo Light-box.">
@@ -40,6 +39,7 @@
                     <img class="jd-front__img__gallery" loading="lazy" src="img/tumblr/IMG_20200107_150205.jpg" data-url-img="img/IMG_20200107_150205.jpg" data-title-img="Pavoreal" data-desc-img="Pavoreal del Museo Dolores Olmedo" alt="">
             </article>
         </section>
+
     </section>
     <section id="acercaDe" class="acercaDe">
         <article id="article__acercaDe" class="article__acercaDe">
@@ -135,7 +135,12 @@
     </footer>
     <script src="https://kit.fontawesome.com/1f8614daef.js" crossorigin="anonymous"></script>
     <script src="https://jizradesign.github.io/releases/lightBox.min.js"></script>
-    <!-- <script src="js/lightBox.js"></script> -->
+    <script>
+        window.onload = (e) =>{
+            const gal = new Gallery("#jd-cont__gallery",".jd-front__img__gallery");
+            gal.newSet();
+        }
+    </script>
     <script src="https://jizradesign.github.io/releases/social-bar.js"></script>
 </body>
 </html>

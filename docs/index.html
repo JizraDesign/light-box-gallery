@@ -5,6 +5,7 @@
     <title>Gallery Light Box by Jizra</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://jizradesign.github.io/releases/lightBox.min.css">
     <link rel="stylesheet" href="https://jizradesign.github.io/releases/social-bar.css">
@@ -59,8 +60,7 @@
                 <div>1: Agrega la etiqueta de estilos entre tu etiqueta &lthead&gt</div>
                 <pre>
                 
-    
-&ltlink rel="stylesheet" href="https://jizradesign.github.io/releases/lightBox.css"&gt
+&ltlink rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /&gt  
 &ltscript src="https://kit.fontawesome.com/1f8614daef.js" crossorigin="anonymous"&gt&lt/script&gt
     
                 </pre>
@@ -68,16 +68,15 @@
                 <pre>
 
     
-&ltsection id="jd-gallery__light__box" class="jd-gallery__light__box center"&gt
-    &ltarticle id="jd-cont__gallery" class="jd-cont__gallery center"&gt
-        &ltimg class="jd-front__img__gallery"" 
-            src="" 
-            data-url-img="" 
-            data-title-img="" 
-            data-desc-img=""
-        &gt
-    &lt/article&gt
-&lt/section&gt
+&ltdiv id="jd-cont__gallery" class="jd-cont__gallery center"&gt
+    &ltimg class="jd-front__img__gallery"" 
+        src="" 
+        data-url-img="" 
+        data-title-img="" 
+        data-desc-img=""
+    &gt
+&lt/div&gt
+
                 </pre>
                 <div>3:Repite este fragmento dentro de la etiqueta &ltdiv id="jd-cont__gallery"&gt por cada imagen que quieras agregar</div>
                 <pre>
@@ -95,7 +94,16 @@
                 <div>4: Agrega el Script antes del cierre de tu etiqueta &lt/body&gt</div>
                 <pre>
                
-&ltscript src="https://jizradesign.github.io/releases/lightBox.js"&gt&lt/script&gt
+&ltscript src="https://jizradesign.github.io/releases/lightBox.min.js"&gt&lt/script&gt
+                  
+                </pre>
+                <div>5: Inicializar la galeria.</div>
+                <pre>
+
+window.onload = (e) =>{
+    const gal = new Gallery("#jd-cont__gallery",".jd-front__img__gallery");
+    gal.newSet();
+}
                   
                 </pre>
                 <article id="observaciones" class="observaciones">
@@ -133,7 +141,6 @@
         <p>Proximamente mas actualizaciones...</p>
         Programado con <i class="fas fa-heart"></i> por Jizra Design
     </footer>
-    <script src="https://kit.fontawesome.com/1f8614daef.js" crossorigin="anonymous"></script>
     <script src="https://jizradesign.github.io/releases/lightBox.min.js"></script>
     <script>
         window.onload = (e) =>{
